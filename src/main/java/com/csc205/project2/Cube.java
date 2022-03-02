@@ -32,7 +32,7 @@ public class Cube extends Shape {
 
     @Override
     public String toString() {
-        String sb = "Cube{" + "width=" + width +
+        String sb = "Cube {" + "width=" + width +
                 ", surface area=" + surfaceArea() +
                 ", volume=" + volume() +
                 '}';

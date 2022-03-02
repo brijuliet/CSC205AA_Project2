@@ -1,49 +1,49 @@
 package com.csc205.project2;
 
-public class Cylinder extends Shape {
+public class Cone extends Shape {
 
-    private double height;
     private double radius;
+    private double height;
 
-    public Cylinder() {
+    public Cone() {
         super();
         this.height = 0.0;
         this.radius = 0.0;
     }
 
-    public Cylinder(double h, double r) {
+    public Cone(double h, double r) {
         super();
         this.height = h;
         this.radius = r;
-    }
-
-    public double getHeight() {
-        return height;
     }
 
     public double getRadius() {
         return radius;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public double getHeight() {
+        return height;
     }
 
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     public double surfaceArea() {
-        return 2.0 * Math.PI * radius * (radius + height);
+        return (Math.PI * Math.pow(radius, 2)) + (Math.PI * radius * Math.sqrt(Math.pow(radius, 2) + Math.pow(height, 2)));
     }
 
     public double volume() {
-        return Math.PI * Math.pow(radius, 2) * height;
+        return (1.0 / 3.0) * Math.PI * Math.pow(radius, 2) * height;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Cylinder {");
+        final StringBuilder sb = new StringBuilder("Cone {");
         sb.append("height=").append(height);
         sb.append(", radius=").append(radius);
         sb.append(", surface area=").append(surfaceArea());
